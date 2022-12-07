@@ -1,0 +1,10 @@
+{
+  "astronauts": "https://ll.thespacedevs.com/2.2.0/astronaut/",
+  "docking_events": "https://ll.thespacedevs.com/2.2.0/docking_event/",
+  "launchers": "https://ll.thespacedevs.com/2.2.0/launcher/",
+  "pads": "https://ll.thespacedevs.com/2.2.0/pad/",
+  "spacestations": "https://ll.thespacedevs.com/2.2.0/spacestation/",
+  "spacecraft_flights": "https://ll.thespacedevs.com/2.2.0/spacecraft/flight/",
+  "spacecrafts": "https://ll.thespacedevs.com/2.2.0/spacecraft/",
+  "programs": "https://ll.thespacedevs.com/2.2.0/program/"
+}
