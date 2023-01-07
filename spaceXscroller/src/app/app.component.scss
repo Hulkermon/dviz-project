@@ -1,0 +1,135 @@
+main {
+  background: #101328;
+  background: linear-gradient(180deg, #101328 0%, #240f21 50%, #2b1b0e 100%);
+  color: #cfc9a6;
+  text-align: center;
+}
+
+.start-text {
+  padding-top: 50px;
+}
+
+.title {
+  font-size: 5vw;
+}
+
+.tiny-title {
+  font-size: 2.5vw;
+}
+
+.subtitle {
+  font-size: 1.5rem;
+}
+
+.intro {
+  h3 {
+    margin: 0;
+  }
+}
+
+
+.fade-in-out {
+  opacity: 0;
+}
+
+
+
+
+
+#scrolly {
+  position: relative;
+}
+
+article {
+  position: relative;
+  padding: 0;
+  width: 100vw;
+  margin: 0;
+}
+
+figure {
+  position: fixed;
+  left: 0;
+  width: 100%;
+  margin: 0;
+
+  p {
+    position: absolute;
+    margin: 0;
+    top: 50%;
+    left: 50%;
+    -moz-transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    font-size: 16rem;
+    font-weight: 600;
+  }
+}
+
+.step {
+  margin: 0 auto 2rem auto;
+  height: 1000px;
+  background-color: rgba(0, 0, 0, 0.1);
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+
+  p {
+    padding: 1rem;
+    font-size: 1.5rem;
+  }
+
+  .step-title {
+    font-size: 2.5rem;
+    padding: 25px 16px 0;
+    margin: 0;
+  }
+
+  .step-description {
+    margin-top: 0;
+  }
+}
+
+
+
+.sticky-templates {
+  display: none;
+}
+
+.title-template {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  #first-line,
+  #second-line {
+    margin: 0;
+  }
+}
+
+
+
+// -------------- STEPS --------------
+
+#step-zero,
+#step-one,
+#step-two {
+  background: none;
+}
+
+#step-zero {
+  height: 45vh;
+}
+
+#step-one {
+  height: 100vh;
+}
+
+#step-two {
+  width: 45vw;
+  margin-bottom: 75vh;
+  margin-left: 5vw;
+  text-align: right;
+}
