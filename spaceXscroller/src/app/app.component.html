@@ -9,25 +9,39 @@
         <h3 class="start-text">start scrolling</h3>
       </div>
 
-      <div id="step-zero" class="step"></div>
+      <div id="step-zero" class="step" data-template="empty"></div>
 
       <div id="step-one" class="step" data-template="title"></div>
-      <div id="step-two" class="step" data-template="empty">
+
+      <div id="step-two" class="step" data-template="launch-graph">
         <div class="beginning">
-          <h1 class="step-title">The Space Race of the 60s</h1>
+          <h1 class="step-title">The <u>Space Race</u> of the 60s</h1>
           <p class="step-description">
             was a fierce competition between the US and USSR to see who could conquer space first, leading to a
             flurry of rocket launches and major breakthroughs in research as each country raced to outdo the other.
           </p>
         </div>
       </div>
-      <div class="step">
-        <p>STEP 4</p>
+
+      <div id="step-three" class="step" data-template="launch-graph">
+        <div class="beginning">
+          <h1 class="step-title"><u>After</u> the Space Race</h1>
+          <p class="step-description">
+            there were fewer rocket launches because the focus shifted
+            from a race for supremacy in space exploration to a more collaborative effort. Additionally, the cost of
+            launching rockets and the technological challenges involved made it more difficult for countries and private
+            companies to justify the expense.
+          </p>
+        </div>
       </div>
 
-      <div class="outro">
+      <div id="step-outro">
         <h1 class="title">Thanks for reading ✌</h1>
-        <p class="subtitle">lmk what u think.</p>
+        <p class="subtitle">
+          lmk what u think.<br>
+          <a href="http://discordapp.com/users/220215888555540490" target="_blank">Hulkermon#0420</a><br>
+          <a href="mailto:hulkermon@gmail.com?subject=spaceXscroller feedback" target="_blank">Hulkermon@gmail.com</a>
+        </p>
       </div>
     </article>
   </section>
@@ -39,7 +53,12 @@
       <h1 id="first-line" class="title fade-in-out">The Impact of <i><u>SpaceX</u></i></h1>
       <h2 class="tiny-title fade-in-out">on</h2>
       <h1 id="second-line" class="title fade-in-out">Modern Space Exploration</h1>
+      <h3 id="credit-line" class="subtitle fade-in-out">a Data Story by Joshua Koroluk</h3>
     </div>
+  </div>
+
+  <div id="launch-graph">
+    <launch-graph class="fade-in-out" [step]="currentStep"></launch-graph>
   </div>
 
   <div id="empty"></div>

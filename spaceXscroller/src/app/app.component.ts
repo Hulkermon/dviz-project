@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import * as scrollama from 'scrollama';
 import { select, selectAll } from 'd3';
+import { LaunchGraphComponent } from './components/launch-graph/launch-graph.component';
 
 
 @Component({
@@ -10,6 +11,7 @@ import { select, selectAll } from 'd3';
 })
 export class AppComponent implements OnInit {
   scroller = scrollama();
+  currentStep = 0;
 
   ngOnInit(): void {
 
@@ -55,22 +57,23 @@ export class AppComponent implements OnInit {
   }
 
   private _handleStepEnter(res: scrollama.CallbackResponse) {
-    // add color to current step only
-    selectAll('.step').classed('is-active', (d: any, i: number) => {
-      return i === res.index;
-    });
 
     this._updateSticky(res);
   }
 
   private _handleStepExit(res: scrollama.CallbackResponse) {
-
+    if (res.direction === 'down') {
+      this.currentStep = res.index + 1;
+    } else {
+      this.currentStep = res.index - 1
+    }
   }
 
   private _handleStepProgress(res: scrollama.ProgressCallbackResponse) {
     switch (res.index) {
-      // Title
       case 1:
+      case 2:
+      case 3:
         const elements = selectAll('.fade-in-out');
         elements.style('transform', `translateY(-${res.progress * 20}vh)`)
         if (res.progress < 0.25) {

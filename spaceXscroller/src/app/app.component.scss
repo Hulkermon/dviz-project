@@ -18,7 +18,7 @@ main {
 }
 
 .subtitle {
-  font-size: 1.5rem;
+  font-size: 2vw;
 }
 
 .intro {
@@ -68,8 +68,6 @@ figure {
 
 .step {
   margin: 0 auto 2rem auto;
-  height: 1000px;
-  background-color: rgba(0, 0, 0, 0.1);
 
   &:last-child {
     margin-bottom: 0;
@@ -107,17 +105,15 @@ figure {
   #second-line {
     margin: 0;
   }
+
+  #credit-line {
+    margin-top: 10vw;
+  }
 }
 
 
 
 // -------------- STEPS --------------
-
-#step-zero,
-#step-one,
-#step-two {
-  background: none;
-}
 
 #step-zero {
   height: 45vh;
@@ -127,9 +123,26 @@ figure {
   height: 100vh;
 }
 
-#step-two {
-  width: 45vw;
-  margin-bottom: 75vh;
-  margin-left: 5vw;
+#step-two,
+#step-three {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 50vh;
+  width: 35vw;
+  max-width: 600px;
+  margin-right: 60vw;
   text-align: right;
+}
+
+#step-outro {
+  padding-top: 25vh;
+  padding-bottom: 15vh;
+  ;
+
+  a {
+    text-decoration: none;
+    color: inherit;
+    font-size: 1.5vw;
+  }
 }
