@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import * as scrollama from 'scrollama';
 import { select, selectAll } from 'd3';
 
+
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
@@ -10,18 +11,10 @@ import { select, selectAll } from 'd3';
 export class AppComponent implements OnInit {
   scroller = scrollama();
 
-  private _updateSticky(res: scrollama.CallbackResponse) {
-    if (res.element.dataset['template']) {
-      const templateId = res.element.dataset['template'].toString();
-      const templateElement = select(`.sticky-templates #${templateId}`);
-      select('figure').html(templateElement.html());
-    }
-  }
-
   ngOnInit(): void {
 
     // 1. force a resize on load to ensure proper dimensions are sent to scrollama
-    this.handleResize();
+    this._handleResize();
 
     // 2. setup the scroller passing options
     // 		this will also initialize trigger observations
@@ -31,13 +24,13 @@ export class AppComponent implements OnInit {
         step: '#scrolly article .step',
         progress: true,
       })
-      .onStepEnter((res) => { this.handleStepEnter(res) })
-      .onStepExit((res) => { this.handleStepExit(res) })
-      .onStepProgress((res) => { this.handleStepProgress(res) });
+      .onStepEnter((res) => { this._handleStepEnter(res) })
+      .onStepExit((res) => { this._handleStepExit(res) })
+      .onStepProgress((res) => { this._handleStepProgress(res) });
   }
 
   // generic window resize listener event
-  handleResize() {
+  private _handleResize() {
     // 1. update height of step elements
     // const stepH = Math.floor(window.innerHeight * 0.75);
     // selectAll('.step').style('height', stepH + 'px');
@@ -53,7 +46,15 @@ export class AppComponent implements OnInit {
     this.scroller.resize();
   }
 
-  handleStepEnter(res: scrollama.CallbackResponse) {
+  private _updateSticky(res: scrollama.CallbackResponse) {
+    if (res.element.dataset['template']) {
+      const templateId = res.element.dataset['template'].toString();
+      const templateElement = select(`.sticky-templates #${templateId}`);
+      select('figure').html(templateElement.html());
+    }
+  }
+
+  private _handleStepEnter(res: scrollama.CallbackResponse) {
     // add color to current step only
     selectAll('.step').classed('is-active', (d: any, i: number) => {
       return i === res.index;
@@ -62,11 +63,11 @@ export class AppComponent implements OnInit {
     this._updateSticky(res);
   }
 
-  handleStepExit(res: scrollama.CallbackResponse) {
+  private _handleStepExit(res: scrollama.CallbackResponse) {
 
   }
 
-  handleStepProgress(res: scrollama.ProgressCallbackResponse) {
+  private _handleStepProgress(res: scrollama.ProgressCallbackResponse) {
     switch (res.index) {
       // Title
       case 1:
@@ -80,7 +81,7 @@ export class AppComponent implements OnInit {
           elements.style('opacity', 1);
         }
         break;
-    
+
       default:
         break;
     }

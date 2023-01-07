@@ -1729,6 +1729,18 @@
   resolved "https://registry.yarnpkg.com/@types/parse-json/-/parse-json-4.0.0.tgz#2f8bb441434d163b35fb8ffdccd7138927ffb8c0"
   integrity sha512-//oorEZjL6sbPcKUaCdIGlIUeH26mgzimjBB77G6XRgnDl/L5wOnpyBGRe/Mmf5CVW3PwEBE1NjiMZ/ssFh4wA==
 
+"@types/plotly.js-dist-min@^2.3.1":
+  version "2.3.1"
+  resolved "https://registry.yarnpkg.com/@types/plotly.js-dist-min/-/plotly.js-dist-min-2.3.1.tgz#514745f5ddcfd25201b2c8d65fbc4f0497bd1d96"
+  integrity sha512-9+rTvlyKDclIB9twal6ou6unUN6iTATLcRvakoFYaHGPnVRNe06LbUGOcgD8O+sddBFz3y2kS2hTKbUPGeVsHA==
+  dependencies:
+    "@types/plotly.js" "*"
+
+"@types/plotly.js@*":
+  version "2.12.11"
+  resolved "https://registry.yarnpkg.com/@types/plotly.js/-/plotly.js-2.12.11.tgz#25a28151e2208dcac6b86c7150494d056fd5ec5f"
+  integrity sha512-FouDGLsFVFTBqedZSUK4LjPYm1HYRJeGfIideEhgsUu4htNmLGsVbbH7SUaCljYKbiZkeCCWinvVYJe8o3m6og==
+
 "@types/qs@*":
   version "6.9.7"
   resolved "https://registry.yarnpkg.com/@types/qs/-/qs-6.9.7.tgz#63bb7d067db107cc1e457c303bc25d511febf6cb"
@@ -2017,6 +2029,13 @@ ajv@^8.0.0, ajv@^8.8.0:
     json-schema-traverse "^1.0.0"
     require-from-string "^2.0.2"
     uri-js "^4.2.2"
+
+angular-plotly.js@^4.0.4:
+  version "4.0.4"
+  resolved "https://registry.yarnpkg.com/angular-plotly.js/-/angular-plotly.js-4.0.4.tgz#11386ed19fe6e6f7695ffaac0d8cdbe129953abc"
+  integrity sha512-A1ri8ZajRYn1pFRyNjeVhwaKJtQfPeQwUHxv0iagf4AxeMvgd/qdYj7EfsycQ2AGb56KimoGCvAaiQtO4PHvkw==
+  dependencies:
+    tslib "^2.0.0"
 
 ansi-colors@4.1.3:
   version "4.1.3"
@@ -5186,6 +5205,11 @@ pkg-dir@^4.1.0:
   dependencies:
     find-up "^4.0.0"
 
+plotly.js-dist-min@^2.17.0:
+  version "2.17.0"
+  resolved "https://registry.yarnpkg.com/plotly.js-dist-min/-/plotly.js-dist-min-2.17.0.tgz#fe849468782c2583d89348dc4e448e88ff398a81"
+  integrity sha512-D6RU+P9g6mG3LW8rXjtDU0Kk78tDeHpSMG4G1Ax8Ngqm5cxydV466Mwd4T8hT2T5GCWRgSzwBmnnhve1LAFVCQ==
+
 postcss-loader@7.0.1:
   version "7.0.1"
   resolved "https://registry.yarnpkg.com/postcss-loader/-/postcss-loader-7.0.1.tgz#4c883cc0a1b2bfe2074377b7a74c1cd805684395"
@@ -6118,7 +6142,7 @@ tree-kill@1.2.2:
   resolved "https://registry.yarnpkg.com/tree-kill/-/tree-kill-1.2.2.tgz#4ca09a9092c88b73a7cdc5e8a01b507b0790a0cc"
   integrity sha512-L0Orpi8qGpRG//Nd+H90vFB+3iHnue1zSSGmNOOCh1GLJ7rUKVwV2HvijphGQS2UmhUZewS9VgvxYIdgr+fG1A==
 
-tslib@2.4.1, tslib@^2.1.0, tslib@^2.3.0:
+tslib@2.4.1, tslib@^2.0.0, tslib@^2.1.0, tslib@^2.3.0:
   version "2.4.1"
   resolved "https://registry.yarnpkg.com/tslib/-/tslib-2.4.1.tgz#0d0bfbaac2880b91e22df0768e55be9753a5b17e"
   integrity sha512-tGyy4dAjRIEwI7BzsB0lynWgOpfqjUdq91XXAlIWD2OwKBH7oCl/GZG/HT4BOHrTlPMOASlMQ7veyTqpmRcrNA==
