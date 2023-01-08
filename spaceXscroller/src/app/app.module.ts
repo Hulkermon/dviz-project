@@ -7,6 +7,7 @@ import { AppComponent } from './app.component';
 import * as PlotlyJS from 'plotly.js-dist-min';
 import { PlotlyModule } from 'angular-plotly.js';
 import { LaunchGraphComponent } from './components/launch-graph/launch-graph.component';
+import { AgencyGraphComponent } from './components/agency-graph/agency-graph.component';
 
 PlotlyModule.plotlyjs = PlotlyJS;
 
@@ -14,6 +15,7 @@ PlotlyModule.plotlyjs = PlotlyJS;
   declarations: [
     AppComponent,
     LaunchGraphComponent,
+    AgencyGraphComponent,
   ],
   imports: [
     BrowserModule,

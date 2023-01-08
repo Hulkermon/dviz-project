@@ -5,39 +5,9 @@ main {
   text-align: center;
 }
 
-.start-text {
-  padding-top: 50px;
-}
-
-.title {
-  font-size: 5vw;
-}
-
-.tiny-title {
-  font-size: 2.5vw;
-}
-
-.subtitle {
-  font-size: 2vw;
-}
-
-.intro {
-  h3 {
-    margin: 0;
-  }
-}
-
-
-.fade-in-out {
-  opacity: 0;
-}
-
-
-
-
-
 #scrolly {
   position: relative;
+  max-width: 1500px;
 }
 
 article {
@@ -52,22 +22,32 @@ figure {
   left: 0;
   width: 100%;
   margin: 0;
+}
 
-  p {
-    position: absolute;
-    margin: 0;
-    top: 50%;
-    left: 50%;
-    -moz-transform: translate(-50%, -50%);
-    -webkit-transform: translate(-50%, -50%);
-    transform: translate(-50%, -50%);
-    font-size: 16rem;
-    font-weight: 600;
-  }
+
+
+
+
+.start-text {
+  padding-top: 50px;
+  margin: 0;
+}
+
+.title {
+  font-size: 5vw;
+}
+
+.tiny-title {
+  font-size: 2.5vw;
+}
+
+.subtitle {
+  font-size: 2vw;
 }
 
 .step {
-  margin: 0 auto 2rem auto;
+  margin: 0 auto 5vh;
+  min-height: 1vh;
 
   &:last-child {
     margin-bottom: 0;
@@ -101,41 +81,81 @@ figure {
   flex-direction: column;
   justify-content: center;
 
-  #first-line,
-  #second-line {
+  h1 {
     margin: 0;
   }
 
-  #credit-line {
+  h3 {
     margin-top: 10vw;
   }
 }
 
+.first-launch-title-template {
+  h1 {
+    font-size: 5.6vw;
+    margin: 0;
+
+    &:last-of-type {
+      font-size: 7.4vw;
+      transform: translateX(-0.5vw);
+    }
+  }
+
+  p {
+    width: 53.5vw;
+    margin: 4vh auto 0;
+    font-size: 1.8vw;
+    text-align: justify;
+  }
+
+}
 
 
 // -------------- STEPS --------------
 
-#step-zero {
+#intro-0 {
   height: 45vh;
 }
 
-#step-one {
+#intro-1 {
   height: 100vh;
 }
 
-#step-two,
-#step-three {
+[id*="chapter-1"] {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  height: 50vh;
+  height: 70vh;
   width: 35vw;
   max-width: 600px;
   margin-right: 60vw;
   text-align: right;
 }
 
-#step-outro {
+#chapter-one-outro,
+#chapter-two-outro {
+  padding: 25vh 0 50vh;
+}
+
+[id*="chapter-2"],
+[id*="chapter-3"] {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 70vh;
+  width: 35vw;
+  max-width: 600px;
+  margin-left: 60vw;
+  text-align: left;
+}
+
+#chapter-3-0 {
+  height: 100vh;
+  width: 50vw;
+  margin-bottom: 15vh;
+}
+
+#outro {
   padding-top: 25vh;
   padding-bottom: 15vh;
   ;
