@@ -122,7 +122,7 @@ export class AppComponent implements OnInit {
         break;
 
       case 10:
-      case 14:
+      case 15:
         threshold = 0.4;
         elementHeight = 70;
         if (res.progress > threshold) {
@@ -134,8 +134,8 @@ export class AppComponent implements OnInit {
         fadeElements.style('opacity', 3 - res.progress * 3);
         if (res.index === 10) {
           selectAll('#chapter-2-2').style('opacity', 3 - res.progress * 3);
-        } else if (res.index === 14) {
-          selectAll('#chapter-3-2').style('opacity', 3 - res.progress * 3);
+        } else if (res.index === 15) {
+          selectAll('#chapter-3-3').style('opacity', 3 - res.progress * 3);
         }
         break;
 

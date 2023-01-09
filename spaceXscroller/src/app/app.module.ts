@@ -19,6 +19,7 @@ const firebaseConfig = {
   appId: "1:63631449546:web:e96922e80b80ef081f8333"
 };
 import { initializeApp } from "firebase/app";
+import { LaunchByAgencyComponent } from './components/launch-by-agency/launch-by-agency.component';
 initializeApp(firebaseConfig);
 
 @NgModule({
@@ -26,6 +27,7 @@ initializeApp(firebaseConfig);
     AppComponent,
     LaunchGraphComponent,
     AgencyGraphComponent,
+    LaunchByAgencyComponent,
   ],
   imports: [
     BrowserModule,
