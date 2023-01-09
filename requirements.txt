@@ -1,0 +1,7 @@
+pandas
+plotly
+plotly.express
+matplotlib
+missingno
+requests
+nbformat>=4.2.0
