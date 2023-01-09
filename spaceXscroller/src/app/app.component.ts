@@ -28,6 +28,10 @@ export class AppComponent implements OnInit {
       .onStepEnter((res) => { this._handleStepEnter(res) })
       .onStepExit((res) => { this._handleStepExit(res) })
       .onStepProgress((res) => { this._handleStepProgress(res) });
+
+    addEventListener('resize', event => {
+      this._handleResize();
+    });
   }
 
   // generic window resize listener event
