@@ -131,8 +131,12 @@ export class AppComponent implements OnInit {
           select('.agency-plot-container').style('transform', `none`)
         }
 
-        fadeElements.style('opacity', 2 - res.progress * 2);
-        select('#chapter-2-2').style('opacity', 2 - res.progress * 2);
+        fadeElements.style('opacity', 3 - res.progress * 3);
+        if (res.index === 10) {
+          selectAll('#chapter-2-2').style('opacity', 3 - res.progress * 3);
+        } else if (res.index === 14) {
+          selectAll('#chapter-3-2').style('opacity', 3 - res.progress * 3);
+        }
         break;
 
       // First Booster Landing Title

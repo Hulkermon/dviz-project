@@ -1,3 +1,4 @@
 <div class="launch-plot-container">
-  <plotly-plot [data]="dataSubject$ | async" [layout]="layoutSubject$ | async" [useResizeHandler]="true"></plotly-plot>
+  <plotly-plot [data]="dataSubject$ | async" [layout]="layoutSubject$ | async" [config]="{staticPlot: true}">
+  </plotly-plot>
 </div>
